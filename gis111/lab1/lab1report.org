@@ -1,0 +1,100 @@
+* Lab 1 - Projection - Report
+
+** Section 1   
+
+   - Projection 1 - California State Plane III
+   - Projection 2 - California State Plant IV
+   - Projection 3 - Continental US - Albers Conic
+   - Projection 4 - Hawaii
+  +---------------+-----------------------+---------------------+---------------------+----------------------+
+  |               |Projection1            |Projection2          |Projection3          |     Projection4      |
+  |               +-----------+-----------+-----------+---------+-----------+---------+------------+---------+
+  |               |Distance(m)|  Bearing  |Distance(m)|Bearing  |Distance(m)|Bearing  |Distance(m) | Bearing |
+  +---------------+-----------++----------+-----------+---------+-----------++--------+------------+---------+
+  |SF-Oakland     |13427.114736|76.08475  |13468.69223|76.08827 |13313.129201|75.82542|14741.014902|78.62318 |
+  +---------------+------------+----------+-----------++--------+------------+--------+------------+---------+
+  |SF-South SF    |13353.053029|175.8291  |13393.025585|175.8284|13483.218558|175.911 |12070.4947  |174.8898 |
+  +---------------+------------+----------+------------+--------+------------+--------+------------+---------+
+
+*** Questions
+   1. Is the ratio similar for both city pairs? Explain the reason using
+   characteristics of conformal projections.
+
+   |             | Distance Ratio                      |
+   |-------------+-------------------------------------|
+   | SF-Oakland  | 13468.69223/13427.114736 = 1.00309  |
+   | SF-South SF | 13393.025585/13353.053029 = 1.00299 |
+   
+   Ratio does look similar.
+   
+
+   - Calculate the distance ratio for projection 4 vs. projection 3.
+     Is the ratio similar for both city pairs? Explain the reason
+     using characteristics of equal area projections.
+     |             | Distance Ratio                      |
+     |-------------+-------------------------------------|
+     | SF-Oakland  | 14741.014902/13313.129201 = 1.10725 |
+     | SF-South SF | 12090.4947/13483.218558 = 0.89670   |
+     
+     Ratio is not similar. Reason: 
+   - Did the bearing values change between projection 1 and projection
+     2? Explain the reason using characteristics of conformal
+     projections.
+
+     Bearing value changed very little (approx ~0.004). 
+
+   - Did the bearing values change between projection 3 and projection
+     4? Explain the reason using characteristics of equal area
+     projections.
+     
+     Bearing values did change, especially noticeable between SF and Oakland
+     projections(magnitude of 3). Reason:
+
+** Section 3: Computing area measurements
+|               | /Projection 1/ | /Projection 2/ | /Projection 3/ | /Projection 4/ |
+|---------------+----------------+----------------+----------------+----------------|
+|               | /Area (acres)/ | /Area (acres)/ | /Area (acres)/ | /Area (acres)/ |
+| /Muir Woods/  |     490.632498 |     493.822755 |     490.698786 |     490.696565 |
+| /Joshua Tree/ |  738338.037075 |  735225.583707 |  735213.550687 |  735212.090587 |
+
+
+   
+*** Questions
+    1. Ratio of area projection 2/projection 1
+       Muir woods - 493.822755/490.632498 = 1.00656
+       Ratio is almost equal to 1 between two projections which was
+       the case in section 1 when distance between two cities were compared
+    2. Ratio of area projection 2/projection 1
+       Joshua tree - 735225.583707/738338.037075 = 0.99578
+       Ratio is almost equal to 1 between two projections which was
+       the case in section 1 when distance between two cities were compared
+    3. Ratio of projection 3 vs projection 4
+       Muir woods - 490.698786 / 490.696565 = 1.00000
+       Joshua tree - 735213.550687 / 735212.090587 = 1.00000
+
+** Section 4: Verifying Custom projection   
+
+*** Stereographic 1(Central Meridian: -122 and Latitude of origin 38)
+ |             |     Distance |  Bearing |
+ |-------------+--------------+----------|
+ | SF-Oakland  | 13428.025189 | 76.09039 |
+ | SF-South SF |  13353.97096 | 175.8345 |
+
+*** Stereographic 2(CM: -122, Latitude of origin: 43)
+|             |     Distance |  Bearing |
+|-------------+--------------+----------|
+| SF-Oakland  | 13451.839698 | 76.08731 |
+| SF-south SF | 13378.409494 | 175.8338 |
+
+*** Questions
+    1. Is the ratio similar for both city pairs? Explain the reason
+       using characteristics of conformal projections.
+       SF-Oakland Distance Ratio: Proj2/ Proj1 : 1.00177
+       SF-South SF Distance Ratio: Proj2/Proj1 : 1.00183
+    2. Did the bearing values change between projection 1 and
+       projection 2? Explain the reason using characteristics of
+       conformal projections.
+
+
+    
+
