@@ -31,7 +31,7 @@
 ** Deliverable 3: Map
    [[../lab2/Lab2_files_AM/MyResultsFolder/image1_svg.svg]]
 
-** Deliverable 4: 
+** Deliverable 4: Proposed BART stations
 | Proposed BART stations |
 |------------------------|
 | Isabel                 |
