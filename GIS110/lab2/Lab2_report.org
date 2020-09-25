@@ -1,5 +1,5 @@
 * Lab 2
-** County
+** Assigned BART station 
    [[./county.png]]
 ** Objectives
    - Geoprocessing
@@ -14,13 +14,40 @@
      - new
    - Map
    - Names of new BART stations
-** Shapefile
-   - Vector data file
-   - holds one data layer at a time
+
+** Deliverable 1: Cities 
+| Cities Served By Proposed BART stations |
+| Altamont                                |
+| Ulmar                                   |
+| Trevarno                                |
+| Livermore                               |
+| East Pleasanton                         |
+| Banta                                   |
+| Lyoth                                   |
+| Carbona                                 |
+| Tracy                                   |
+
+** Deliverable 2: County stats
+|                     | Customers served by existing BART station at Dublin/Pleasanton | Newly Served by proposed stations Isabel, Greenville, Tracy |
+| Alameda County      | 147,147                                                        | 128,350                                                     |
+| Contra Costa County | 58,513                                                         | 5854                                                        |
+| San Joaquin County  | 0                                                              | 121,097                                                     |
+
+** Deliverable 3: Map
+   [[../lab2/Lab2_files_AM/MyResultsFolder/image1_svg.svg]]
+
+** Deliverable 4: 
+| Proposed BART stations |
+|------------------------|
+| Isabel                 |
+| Greenville             |
+| Tracy                  |
+   
+** Report by: Arulselvan Madhavan on 2020-09-25
 ** Geodatabase - .gdb file
    - Object oriented data repositories
    - Multiple datasets that share logical spatial relationships called
      topology
-** Buffer operation
-
-[[../lab2/Lab2_files_AM/MyResultsFolder/image1_svg.svg]]
+** Shapefile
+   - Vector data file
+   - holds one data layer at a time
