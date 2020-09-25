@@ -33,28 +33,3 @@
 | Tracy                  |
    
 ** Report by: Arulselvan Madhavan on 2020-09-25
-
-
-
-
-* Miscellanous - Notes and Reference
-** Objectives
-   - Geoprocessing
-   - Spatial analysis
-   - Deriving stats
-** Geodatabase - .gdb file
-   - Object oriented data repositories
-   - Multiple datasets that share logical spatial relationships called
-     topology
-** Shapefile
-   - Vector data file
-   - holds one data layer at a time
-** Output
-   - List of cities served by proposed BART stations
-   - Number of people served
-     - existing
-     - new
-   - Map
-   - Names of new BART stations
-** Softwares
-   ArcCatalog, ArcMap, ArcToolbox
