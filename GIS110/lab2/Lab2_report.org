@@ -44,6 +44,8 @@
 | Tracy                  |
    
 ** Report by: Arulselvan Madhavan on 2020-09-25
+
+* Miscellanous - Notes and Reference
 ** Geodatabase - .gdb file
    - Object oriented data repositories
    - Multiple datasets that share logical spatial relationships called
