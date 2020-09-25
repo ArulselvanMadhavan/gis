@@ -1,0 +1,26 @@
+* Lab 2
+** County
+   [[./county.png]]
+** Objectives
+   - Geoprocessing
+   - Spatial analysis
+   - Deriving stats
+** Softwares
+   ArcCatalog, ArcMap, ArcToolbox
+** Output
+   - List of cities served by proposed BART stations
+   - Number of people served
+     - existing
+     - new
+   - Map
+   - Names of new BART stations
+** Shapefile
+   - Vector data file
+   - holds one data layer at a time
+** Geodatabase - .gdb file
+   - Object oriented data repositories
+   - Multiple datasets that share logical spatial relationships called
+     topology
+** Buffer operation
+
+[[../lab2/Lab2_files_AM/MyResultsFolder/image1_svg.svg]]
