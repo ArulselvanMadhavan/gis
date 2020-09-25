@@ -17,6 +17,7 @@
 
 ** Deliverable 1: Cities 
 | Cities Served By Proposed BART stations |
+|-----------------------------------------|
 | Altamont                                |
 | Ulmar                                   |
 | Trevarno                                |
@@ -29,6 +30,7 @@
 
 ** Deliverable 2: County stats
 |                     | Customers served by existing BART station at Dublin/Pleasanton | Newly Served by proposed stations Isabel, Greenville, Tracy |
+|---------------------+----------------------------------------------------------------+-------------------------------------------------------------|
 | Alameda County      | 147,147                                                        | 128,350                                                     |
 | Contra Costa County | 58,513                                                         | 5854                                                        |
 | San Joaquin County  | 0                                                              | 121,097                                                     |
