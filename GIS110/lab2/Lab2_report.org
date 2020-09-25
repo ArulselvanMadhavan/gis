@@ -1,12 +1,6 @@
 * Lab 2
 ** Assigned BART station 
    [[./county.png]]
-** Objectives
-   - Geoprocessing
-   - Spatial analysis
-   - Deriving stats
-** Softwares
-   ArcCatalog, ArcMap, ArcToolbox
 
 ** Deliverable 1: Cities 
 | Cities Served By Proposed BART stations |
@@ -40,7 +34,14 @@
    
 ** Report by: Arulselvan Madhavan on 2020-09-25
 
+
+
+
 * Miscellanous - Notes and Reference
+** Objectives
+   - Geoprocessing
+   - Spatial analysis
+   - Deriving stats
 ** Geodatabase - .gdb file
    - Object oriented data repositories
    - Multiple datasets that share logical spatial relationships called
@@ -55,3 +56,5 @@
      - new
    - Map
    - Names of new BART stations
+** Softwares
+   ArcCatalog, ArcMap, ArcToolbox
