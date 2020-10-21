@@ -1,0 +1,62 @@
+* Species
+| M-Z   | Pacific fisher             | Lemmon's milk vetch      |
+|       |                            |                          |
+|       | Lahontan cutthroat trout   | Mount Lyell salamander   |
+|       |                            |                          |
+|       | Hall's meadow hawksbeard   | Owens speckled dace      |
+  
+* Questions
+
+1. Is the attribute table of “species.shp” de-normalized? Why or why
+   not?
+
+   Yes. Normalization is done within a context. Raw data is collected,
+   at first, without any usecase and thus de-normalized. The context
+   in which the data is used decides the normalization on the data
+
+2. What values are displayed in the “priority” column?
+   
+   Protected
+
+3. Write down the expression that extracts the first 4 characters of
+   the SITEDATE value 
+
+   I chose python since that was easier for me. I used "Advanced" and
+   chose Python as the parser
+   #+BEGIN_SRC python
+   def FindLabel ( [species.CNAME], [meta_species.MAX_SITEDATE] ):
+     sd = [meta_species.MAX_SITEDATE]
+   return [species.CNAME] + ":" + sd[0:4]
+   #+END_SRC
+
+4. Which VBscript function can convert the common name of each species
+   to lower case?
+
+   Python function
+   #+BEGIN_SRC python
+   "".lowercase
+   #+END_SRC
+
+5. What is this condition expression?
+   
+   #+BEGIN_SRC sql
+   meta_species.PRIORITY = 1 AND"species.SITEDATE" LIKE '%XXXXX'
+   #+END_SRC
+
+6. How to make sure that polygon labels are fitted within polygon
+   boundaries?
+
+   Layer properties -> Label -> Placement properties -> Adjust Label
+   position options(Uncheck the option to exceed polygon boundary)
+
+7. Has the priority domain been carried over to this layer?
+
+   Yes
+
+8. Which field contains larger area values? Which one is more
+   accurate? Why?
+
+   "shape_area" field which contains the area of the dissolved
+   polygons is what we need since we are trying to calculate the total
+   area of polygons inhabited by the priority X animals. "sum" is the
+   total of individual area which has the problem of double counting

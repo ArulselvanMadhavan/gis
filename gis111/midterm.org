@@ -1,0 +1,128 @@
+*GEOG 111: Midterm Exam*
+
+*Answer each of the following questions. No answer need be longer than
+2-3 sentences. Type your answers and then upload them to Canvas by
+Wednesday, October 21^{st}. The test is open book and open note.*
+
+*Map Projections, Datum, and GCS*
+
+1. Compare and contrast the types of distortions between conformal and
+   equal-area projections when in areas outside their respective
+   low-distortion zones.
+
+   Conformal - preserves shapes distorts angle, area, size, distance,
+   or scale
+   Equal area - preserves area and distorts angle, shape, distance, scale
+
+2. What tools will change projection visually but not make changes to
+   data files? What tools will change projection in data files?
+
+   Project - Allows you to change projection without updating data
+   files
+   Define Projection - Changes projection in the data files
+
+3. What do the zone numbers of UTM projections represent?
+
+   UTM projections divide 360 degrees into 60 zones of 6 degrees width
+   in longitude. The zones are numbered increasingly from 180W to
+   174E. So, Zone 10 would mean 180W - (6 * 10) = 120W to 126W
+
+4. I have streets from one data source, and streams from another data
+   source, covering the same area. They appear very far away from each
+   other in ArcMap. What do I have to do to make them overlay?
+
+   Use "Batch Project" to change the coordinate system of the two
+   feature classes to a common coordinate system.
+
+5. Why is it easier to represent smaller areas accurately in any map
+   projection?
+
+   Positional accuracy, Logical accuracy, conceptual accuracy,
+   attribute accuracy - As areas increase, the number of overlaps the
+   projections has to handle and demarcate increases. Projections also
+   has to carry the resolution of the data to the calculations and
+   round them off within the accepted "uncertainty accuracy %".
+
+*Databases*
+
+6.  I have two tables: landlords table and buildings belonging to the
+    landlords. Each building is wholly owned by one landlord. What is
+    the cardinality of the relationship (1-1, 1-M, M-N)?
+
+    1-1
+
+7.  If I join the buildings and landlords table together to show the
+    residence address of building owners, which table is the base table?
+
+    landlords table
+
+8.  Table A can be decomposed into two related tables, at least one of
+    which has fewer rows than table A. Is table A normalized or
+    de-normalized?
+
+    De-normalized
+
+9.  What are the benefits of a normalized table structure? What are the
+    benefits of a de-normalized table structure?
+
+    Denormalized table - data can be queried quickly. Useful for cases
+   data is mostly read but not written to or combined with (using joins)
+
+    Normalized table - reduces data redundancy, and thereby allowing
+   easier combinations with other tables. Less room for inconsistency
+   or collisions. Highly focussed
+
+10. How do I extract the first 4 characters of a text field's value (the
+    field's name is “USER_NAME”)?
+
+    In SQL
+    #+BEGIN_SRC sql
+    select SUBSTRING(USER_NAME, 1, 4) as SHORT_UN
+    #+END_SRC
+    For labels:
+    #+BEGIN_SRC python
+   def FindLabel ( [table.USER_NAME]):
+     sd = [table.USER_NAME]
+   return sd[0:4]
+    #+END_SRC
+
+*Spatial Analysis*
+
+11. Briefly define suitability analysis.
+
+    Suitability analysis is the evaluation of an area for a particular
+    use. For example, when importing data that is not GIS tagged or
+    marked with co-ordinates, as in the case of an image, we choose a
+    known coordinate in the map and try to align the image to that
+    point. Suitability analysis is that each aspect of the landscape
+    has intrinsic characteristics that are either suitable or
+    unsuitable for the activities being planned 
+
+12. I am doing an overlay analysis (“union”) of two GIS layers: a forest
+    polygon layer and air pollution layer. The forest polygons comprise
+    6 different forest types. The air pollution layer has 4 categories
+    from low to high. Will the output layer have more or less polygons
+    than either input layers? What is the maximum number of unique
+    categories in the output data?
+    
+    More polygons. Maximum = 6 + 4(If none overlap)
+
+13. I'm performing a union operation using a pollution layer and a
+    census tract layer. The two layers have different extents. What will
+    be the value of “pollution level” field in areas outside the extents
+    of the pollution layer?
+
+    The value of "pollution_level" from census tract layer will take
+    precedence, if it exists. If it doesn't exist, it will be NULL
+
+14. What is a multi-part feature? What are the benefits of using
+    multi-part features?
+
+    Multi-part feature is when you represent a feature using multiple
+    physical parts(line or polygon). The benefits are that you can
+    represent a group of disparate but connected features without
+    having to separate them for display purposes, since they are
+    logically connected. Example: A group of islands(Archipalego) that
+    share the same feature table but are physically separated.
+
+
